@@ -1,0 +1,8 @@
+<resources>
+    <!-- Accueil -->
+    <string name="app_name">BoardingDraft</string>
+    <string name="bouton_lancer_vote">Voter</string>
+    <string name="bouton_liste_jeux">Liste des jeux</string>
+    <string name="texte_joueurs">Joueurs présents :</string>
+    <string name="texte_liste">Saisir le nom du joueur</string>
+</resources>
