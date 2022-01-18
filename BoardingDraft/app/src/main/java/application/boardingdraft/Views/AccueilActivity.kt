@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import application.boardingdraft.R
+import androidx.fragment.app.commit
+import androidx.fragment.app.replace
+import application.boardingdraft.Views.List.ListeJeuxFragment
 
 class AccueilActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,5 +19,9 @@ class AccueilActivity : AppCompatActivity() {
         this.getSupportActionBar()!!.hide();
 
         setContentView(R.layout.activity_accueil)
+
+        supportFragmentManager.commit{
+            replace<ListeJeuxFragment>(R.id.fragment_recycler_view_accueil)
+        }
     }
 }
