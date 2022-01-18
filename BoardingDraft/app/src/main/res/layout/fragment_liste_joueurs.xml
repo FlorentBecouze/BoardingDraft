@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.List.ListeJeuxFragment">
+    tools:context=".Views.List.ListeJoueursFragment">
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_accueil"
+        android:id="@+id/recycler_view_accueil_liste_joueurs"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>

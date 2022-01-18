@@ -33,12 +33,14 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/bouton_accueil_voter"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/orange_fonce"
             android:text="@string/bouton_lancer_vote" />
 
         <Button
+            android:id="@+id/bouton_accueil_liste_jeux"
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/orange_fonce"
@@ -51,7 +53,7 @@
         android:id="@+id/joueurTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="400dp"
         android:layout_marginLeft="20dp"
         android:text="@string/texte_joueurs"
         android:textSize="20sp"
@@ -59,20 +61,39 @@
         android:textStyle="bold"/>
     
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_recycler_view_accueil"
-        android:layout_marginTop="420dp"
+        android:id="@+id/fragment_recycler_view_accueil_liste_joueurs"
+        android:layout_marginTop="440dp"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:name="application.boardingdraft.Views.List.ListeJeuxFragment"/>
+        android:name="application.boardingdraft.Views.List.ListeJoueursFragment"/>
 
     <EditText
         android:id="@+id/saisie_joueur"
-        android:layout_width="300dp"
+        android:layout_width="280dp"
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="620dp"
+        android:layout_marginTop="660dp"
         android:hint="@string/texte_liste"/>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bouton_add_joueur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginTop="660dp"
+        android:layout_marginLeft="310dp"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+
+    <!-- Fragment affichant la page de vote -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_page_liste_jeux"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="application.boardingdraft.Views.JeuxFragment"/>
+
+
+    <!-- Fragment affichant la page des jeux -->
 
 
 </FrameLayout>
