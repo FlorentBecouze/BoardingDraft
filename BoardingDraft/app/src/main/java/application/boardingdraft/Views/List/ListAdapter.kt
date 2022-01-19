@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import application.boardingdraft.Model.Joueur
 import application.boardingdraft.R
 
-class ListAdapter(val listeJoueurs: List<Joueur>) : RecyclerView.Adapter<Cellule>() {
+class ListAdapter(val listeJoueurs: ArrayList<Joueur>) : RecyclerView.Adapter<Cellule>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Cellule {
         val inflater = LayoutInflater.from(parent.context)
         val view : View = inflater.inflate(R.layout.cellule_liste, parent, false)
@@ -18,7 +18,7 @@ class ListAdapter(val listeJoueurs: List<Joueur>) : RecyclerView.Adapter<Cellule
     }
 
     override fun onBindViewHolder(holder: Cellule, position: Int) {
-        holder.textViewJoueur.text = listeJoueurs[position].name
+        holder.textViewJoueur.text = listeJoueurs[position].joueurData.name
     }
 
     override fun getItemCount(): Int {
