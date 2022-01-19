@@ -6,94 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".Views.AccueilActivity">
 
-
-    <TextView
-        android:id="@+id/titreTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:text="@string/app_name"
-        android:textColor="@color/orange"
-        android:textSize="40sp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:layout_width="220dp"
-        android:layout_height="220dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="80dp"
-        android:src="@drawable/image_accueil" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="310dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/bouton_accueil_voter"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/orange_fonce"
-            android:text="@string/bouton_lancer_vote" />
-
-        <Button
-            android:id="@+id/bouton_accueil_liste_jeux"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/orange_fonce"
-            android:text="@string/bouton_liste_jeux"
-            android:layout_marginLeft="20dp"/>
-    </LinearLayout>
-
-
-    <TextView
-        android:id="@+id/joueurTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:layout_marginLeft="20dp"
-        android:text="@string/texte_joueurs"
-        android:textSize="20sp"
-        android:textColor="@color/gris"
-        android:textStyle="bold"/>
-    
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_recycler_view_accueil_liste_joueurs"
-        android:layout_marginTop="440dp"
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:name="application.boardingdraft.Views.List.ListeJoueursFragment"/>
-
-    <EditText
-        android:id="@+id/saisie_joueur"
-        android:layout_width="280dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="660dp"
-        android:hint="@string/texte_liste"/>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/bouton_add_joueur"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:layout_marginTop="660dp"
-        android:layout_marginLeft="310dp"
-        app:srcCompat="@android:drawable/ic_input_add" />
-
-
-    <!-- Fragment affichant la page de vote -->
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_page_liste_jeux"
+        android:id="@+id/fragment_accueil"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="application.boardingdraft.Views.JeuxFragment"/>
-
-
-    <!-- Fragment affichant la page des jeux -->
-
+        android:name="application.boardingdraft.Views.AccueilFragment" />
 
 </FrameLayout>
