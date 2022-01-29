@@ -1,12 +1,15 @@
-package application.boardingdraft.Views
+package application.boardingdraft.Frontend.Views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import application.boardingdraft.R
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
+import androidx.room.Room
+import application.boardingdraft.Backend.BDD.AppDatabase
 
 class AccueilActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

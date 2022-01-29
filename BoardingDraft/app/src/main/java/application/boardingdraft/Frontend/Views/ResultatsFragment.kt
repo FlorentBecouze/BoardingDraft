@@ -1,4 +1,4 @@
-package application.boardingdraft.Views
+package application.boardingdraft.Frontend.Views
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

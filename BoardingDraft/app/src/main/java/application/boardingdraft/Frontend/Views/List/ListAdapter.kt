@@ -1,13 +1,12 @@
-package application.boardingdraft.Views.List
+package application.boardingdraft.Frontend.Views.List
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import application.boardingdraft.Model.Joueur
+import application.boardingdraft.Frontend.Model.Joueur
 import application.boardingdraft.R
 
 class ListAdapter(val listeJoueurs: ArrayList<Joueur>) : RecyclerView.Adapter<Cellule>() {
@@ -18,7 +17,8 @@ class ListAdapter(val listeJoueurs: ArrayList<Joueur>) : RecyclerView.Adapter<Ce
     }
 
     override fun onBindViewHolder(holder: Cellule, position: Int) {
-        holder.textViewJoueur.text = listeJoueurs[position].joueurData.name
+        //holder.textViewJoueur.text = listeJoueurs[position].joueurData.name
+        holder.textViewJoueur.text = listeJoueurs[position].NomJoueur
     }
 
     override fun getItemCount(): Int {

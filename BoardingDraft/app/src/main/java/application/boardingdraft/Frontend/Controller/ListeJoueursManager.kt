@@ -1,8 +1,4 @@
-package application.boardingdraft.Controller
-
-import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.RecyclerView
-
+package application.boardingdraft.Frontend.Controller
 
 
 /*

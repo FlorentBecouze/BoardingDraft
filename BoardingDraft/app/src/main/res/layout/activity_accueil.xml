@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.AccueilActivity">
+    tools:context=".Frontend.Views.AccueilActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_accueil"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="application.boardingdraft.Views.AccueilFragment" />
+        android:name="application.boardingdraft.Frontend.Views.AccueilFragment" />
 
 </FrameLayout>
