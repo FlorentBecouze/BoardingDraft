@@ -9,7 +9,6 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Joueur(
-    @PrimaryKey(autoGenerate = true) val NoJoueur: Int,
-    val NomJoueur: String,
+    @PrimaryKey(autoGenerate = true) val NoJoueur: Int = 0,
     val PrenomJoueur: String) {
 }

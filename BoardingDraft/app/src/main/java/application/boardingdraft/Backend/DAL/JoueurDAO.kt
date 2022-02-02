@@ -9,18 +9,17 @@ import application.boardingdraft.Frontend.Model.Joueur
 @Dao
 interface JoueurDAO {
     @Query("SELECT * FROM Joueur")
-    fun getAllJoueur(): List<Joueur>
+    suspend fun getAllJoueur(): List<Joueur>
 
-    @Query("SELECT * FROM Joueur WHERE NomJoueur LIKE :nom " +
-            "AND PrenomJoueur LIKE :prenom")
-    fun getJoueur(nom: String, prenom: String) : Joueur
+    @Query("SELECT * FROM Joueur WHERE NoJoueur = :id")
+    suspend fun getJoueur(id: Int) : Joueur
 
     @Insert
     suspend fun insertJoueur(j: Joueur)
 
     @Insert
-    fun insertTabJoueurs(tabJoueurs: List<Joueur>)
+    suspend fun insertTabJoueurs(tabJoueurs: List<Joueur>)//retourner un long, faire un copy d'un joueur avec cet identifiant
 
-    @Delete
-    fun deleteJoueur(j: Joueur)
+    @Query("DELETE FROM Joueur WHERE NoJoueur = :id")
+    suspend fun deleteJoueur(id: Int)
 }

@@ -13,10 +13,10 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.234375" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.234375" />
         <entry key="app/src/main/res/drawable/ic_launcher_boardingdraft_background.xml" value="0.234375" />
-        <entry key="app/src/main/res/layout/activity_accueil.xml" value="0.19655797101449277" />
+        <entry key="app/src/main/res/layout/activity_accueil.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19655797101449277" />
         <entry key="app/src/main/res/layout/cellule_liste.xml" value="0.25104166666666666" />
-        <entry key="app/src/main/res/layout/fragment_accueil.xml" value="0.15833333333333333" />
+        <entry key="app/src/main/res/layout/fragment_accueil.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_liste_jeux.xml" value="0.19655797101449277" />
         <entry key="app/src/main/res/layout/fragment_liste_joueurs.xml" value="0.25104166666666666" />
         <entry key="app/src/main/res/layout/fragment_resultats.xml" value="0.19655797101449277" />
