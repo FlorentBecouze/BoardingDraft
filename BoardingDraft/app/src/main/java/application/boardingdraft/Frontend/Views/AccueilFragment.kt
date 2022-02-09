@@ -4,37 +4,51 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.*
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import application.boardingdraft.Backend.BDD.AppDatabase
 import application.boardingdraft.Backend.DAL.JoueurDAO
+import application.boardingdraft.Backend.Repository.JoueurRepository
 import application.boardingdraft.Frontend.Model.Joueur
+import application.boardingdraft.Frontend.ViewModel.JoueurViewModel
 import application.boardingdraft.Frontend.Views.List.IJoueur
 import application.boardingdraft.R
 import application.boardingdraft.Frontend.Views.List.ListAdapter
 import kotlinx.coroutines.launch
 
+//ENLEVER LES VILAINS POINTS D'EXCLAMATION !!!
+
+
 
 class AccueilFragment : Fragment(R.layout.fragment_accueil), IJoueur {
 
-    var database:AppDatabase? = null
-    var listeJoueurs:ArrayList<Joueur> = ArrayList<Joueur>()
+    val joueurViewModel:JoueurViewModel by viewModels()
     var recyclerView:RecyclerView? = null
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        database = Room.databaseBuilder(requireContext(), AppDatabase::class.java, "Notre_base").build()
-
         recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_accueil_liste_joueurs)
         recyclerView!!.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView!!.adapter = ListAdapter(listeJoueurs, this)
+        recyclerView!!.adapter = ListAdapter(emptyList(), this)
+
+        // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
+        joueurViewModel!!.currentListeJoueurs.observe(viewLifecycleOwner) {
+                joueurs:List<Joueur> ->
+            (recyclerView!!.adapter!! as ListAdapter).listeJoueurs = joueurs
+            recyclerView!!.adapter!!.notifyDataSetChanged()
+        }
+
 
         var bouton_accueil_voter = view?.findViewById<Button>(R.id.bouton_accueil_voter)
         bouton_accueil_voter.setOnClickListener {
-            Toast.makeText(context, "testtest", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "En construction", Toast.LENGTH_SHORT).show()
         }
 
         var bouton_accueil_liste_jeux = view?.findViewById<Button>(R.id.bouton_accueil_liste_jeux)
@@ -46,45 +60,37 @@ class AccueilFragment : Fragment(R.layout.fragment_accueil), IJoueur {
         bouton_add_joueur.setOnClickListener {
             val nameNewJoueur: String = view?.findViewById<EditText>(R.id.saisie_joueur).text.toString()
             if(nameNewJoueur != "" && nameNewJoueur.get(0) != ' ') {
-                val monJoueurDao = database!!.joueurDao()
                 val textView = view?.findViewById<EditText>(R.id.saisie_joueur)
-                var joueur:Joueur? = null
 
-                lifecycleScope.launch {
-                    insererJoueur(monJoueurDao, Joueur(PrenomJoueur=textView.text.toString()))
-                    //joueur = insererJoueur(....
-                }
-
-                //ON SEST ARRETE LA, On CHERCHAIT COMMENT FAIRE POUR QUE INSERT DE DAO RETOURNE LE JOUEUR
-                //AFIN QUON PUISSE LE SUPPRIMER DE LA LISTE CAR LE NUMERO NE SE GENERE AUTOMATIQUEMENT QUA LINSERTION
-
-
-                listeJoueurs.add(joueur)
+                joueurViewModel!!.insererJoueur(Joueur(PrenomJoueur = textView.text.toString()))
                 textView.text.clear()
-
-                recyclerView!!.adapter!!.notifyDataSetChanged()
+                /*
+                lifecycleScope.launch {
+                    var idJoueurInsere:Long = insererJoueur(monJoueurDao, Joueur(PrenomJoueur = textView.text.toString()))
+                    var joueur:Joueur = Joueur(NoJoueur = idJoueurInsere.toInt(), PrenomJoueur = textView.text.toString())
+                    listeJoueurs.add(joueur)
+                    textView.text.clear()
+                    recyclerView!!.adapter!!.notifyDataSetChanged()
+                }
+                */
             }
         }
     }
 
     override fun onButtonSuppJoueurClicked(joueur: Joueur) {
-        val monJoueurDao = database!!.joueurDao()
 
-        listeJoueurs.remove(joueur)
+        joueurViewModel!!.supprimerJoueur(joueur)
+        /*listeJoueurs.remove(joueur)
 
         lifecycleScope.launch {
             supprimerJoueur(monJoueurDao, joueur)
         }
 
         recyclerView!!.adapter!!.notifyDataSetChanged()
+        */
     }
 
-    suspend fun insererJoueur(dao:JoueurDAO, joueur: Joueur) {
-        dao.insertJoueur(joueur)
-    }
 
-    suspend fun supprimerJoueur(dao:JoueurDAO, joueur: Joueur) {
-        dao.deleteJoueur(joueur.NoJoueur)
-    }
+
 }
 

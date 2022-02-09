@@ -14,7 +14,7 @@ interface IJoueur {
     fun onButtonSuppJoueurClicked(joueur:Joueur)
 }
 
-class ListAdapter(val listeJoueurs: ArrayList<Joueur>, val interfaceJoueur: IJoueur) : RecyclerView.Adapter<Cellule>() {
+class ListAdapter(var listeJoueurs: List<Joueur>, val interfaceJoueur: IJoueur) : RecyclerView.Adapter<Cellule>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Cellule {
         val inflater = LayoutInflater.from(parent.context)
