@@ -2,7 +2,6 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    //id 'org.jetbrains.kotlin.plugin.serialization' version '1.6.10'
 }
 
 android {
@@ -46,9 +45,6 @@ dependencies {
     // Utilisation des fragments
     implementation "androidx.fragment:fragment-ktx:1.2.5"
 
-    // Utilisation de la sérialisation
-    //implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2'
-
     // Utilisation de Room
     implementation "androidx.room:room-ktx:2.4.1"
     implementation "androidx.room:room-runtime:2.4.1"
@@ -72,6 +68,10 @@ dependencies {
     // UI
     implementation "androidx.constraintlayout:constraintlayout:2.1.2"
     implementation "com.google.android.material:material:1.4.0"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
 
     // Testing
     testImplementation "junit:junit:4.13.1"

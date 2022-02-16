@@ -26,7 +26,6 @@ class ListAdapter(var listeJoueurs: List<Joueur>, val interfaceJoueur: IJoueur) 
         holder.textViewJoueur.text = listeJoueurs[position].PrenomJoueur
 
         holder.imageButtonSuppJoueur.setOnClickListener {
-
             val joueur = listeJoueurs[position]
             interfaceJoueur.onButtonSuppJoueurClicked(joueur)
         }

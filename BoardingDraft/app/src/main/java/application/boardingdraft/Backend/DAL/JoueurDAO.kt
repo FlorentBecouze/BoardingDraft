@@ -10,6 +10,8 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface JoueurDAO {
+    // Ces méthodes ne sont pas en "suspend" car elles retournent des LiveData
+    // Les LiveData possèdent déjà un système pour lancer les méthodes dans des threads différents
     @Query("SELECT * FROM Joueur")
     fun getAllJoueur(): LiveData<List<Joueur>>
 
