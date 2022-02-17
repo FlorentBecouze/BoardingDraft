@@ -9,6 +9,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -46,14 +47,17 @@ class AccueilFragment : Fragment(R.layout.fragment_accueil), IJoueur {
 
         var bouton_accueil_voter = view.findViewById<Button>(R.id.bouton_accueil_voter)
         bouton_accueil_voter.setOnClickListener {
-            Toast.makeText(context, "En construction", Toast.LENGTH_SHORT).show()
-            //(requireActivity() as AccueilActivity).passerAuFragmentVote(view)
-            Navigation.findNavController(view).navigate(R.id.action_accueilFragment_to_voteJeuxFragment)
+            //(requireActivity() as AccueilActivity).passerAuFragmentVote()
+
+            findNavController().navigate(R.id.voteJeuxFragment)
+
+            //view.findNavController().navigate(VoteJeuxFragmentDirections.actionAccueilFragmentToVoteJeuxFragment())
         }
 
         var bouton_accueil_liste_jeux = view.findViewById<Button>(R.id.bouton_accueil_liste_jeux)
         bouton_accueil_liste_jeux.setOnClickListener {
-
+            //(requireActivity() as AccueilActivity).passerAuFragmentJeux()
+            findNavController().navigate(R.id.jeuxFragment)
         }
 
         var bouton_add_joueur = view.findViewById<ImageButton>(R.id.bouton_add_joueur)

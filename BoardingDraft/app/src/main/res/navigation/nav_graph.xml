@@ -13,10 +13,18 @@
         <action
             android:id="@+id/action_accueilFragment_to_voteJeuxFragment"
             app:destination="@id/voteJeuxFragment" />
+        <action
+            android:id="@+id/action_accueilFragment_to_jeuxFragment"
+            app:destination="@id/jeuxFragment" />
     </fragment>
     <fragment
         android:id="@+id/voteJeuxFragment"
         android:name="application.boardingdraft.Frontend.Views.VoteJeuxFragment"
         android:label="fragment_vote_jeux"
         tools:layout="@layout/fragment_vote_jeux" />
+    <fragment
+        android:id="@+id/jeuxFragment"
+        android:name="application.boardingdraft.Frontend.Views.JeuxFragment"
+        android:label="fragment_jeux"
+        tools:layout="@layout/fragment_jeux" />
 </navigation>

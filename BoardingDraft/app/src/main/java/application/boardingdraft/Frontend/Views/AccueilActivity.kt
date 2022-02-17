@@ -16,7 +16,6 @@ import application.boardingdraft.Backend.BDD.AppDatabase
 
 class AccueilActivity : AppCompatActivity() {
 
-    var navHostFragment: NavHostFragment? = null
     var navController: NavController? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,22 +27,26 @@ class AccueilActivity : AppCompatActivity() {
         // Affichage de l'activity principale de l'application
         setContentView(R.layout.activity_accueil)
 
-        navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        navController = navHostFragment?.navController
+        navController = findNavController(R.id.nav_host_fragment)
 
         // Affichage du fragment contenu par l'activity principale de l'application
-        //supportFragmentManager.commit{
-        //    replace<AccueilFragment>(R.id.fragment_accueil)
-        //}
+        /*supportFragmentManager.commit{
+            replace<AccueilFragment>(R.id.fragment_accueil)
+        }*/
     }
-
-    fun passerAuFragmentVote(view: View) {
-        //supportFragmentManager.commit{
-        //    replace<VoteJeuxFragment>(R.id.fragment_accueil)
-        //    addToBackStack(null)
-        //}
-
-
-    //navController?.navigate(R.id.action_accueilFragment_to_voteJeuxFragment)
-    }
+/*
+    fun passerAuFragmentVote() {
+        supportFragmentManager.commit{
+            replace<VoteJeuxFragment>(R.id.fragment_accueil)
+            addToBackStack(null)
+        }
+        //navController?.navigate(R.id.voteJeuxFragment)
+    }*/
+/*
+    fun passerAuFragmentJeux() {
+        supportFragmentManager.commit{
+            replace<JeuxFragment>(R.id.fragment_accueil)
+            addToBackStack(null)
+        }
+    }*/
 }

@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Frontend.Views.AccueilActivity">
-    <!--
+<!--
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragment_accueil"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:name="application.boardingdraft.Frontend.Views.AccueilFragment" />
-    -->
-        <!--
+-->
+<!--
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragment_vote"
             android:layout_width="match_parent"
