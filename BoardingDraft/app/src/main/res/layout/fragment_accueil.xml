@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView_accueil"
         android:layout_width="0dp"
         android:layout_height="220dp"
         android:layout_gravity="center_horizontal"
@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/texte_joueurs"
+        android:text="@string/texte_liste_joueurs"
         android:textColor="@color/gris"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -59,7 +59,7 @@
         android:id="@+id/saisie_joueur"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:hint="@string/texte_liste"
+        android:hint="@string/texte_saisie_nom_joueur"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.15"
@@ -86,7 +86,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.88"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_accueil"
         app:layout_constraintVertical_bias="0.050000012" />
 
     <Button
@@ -99,7 +99,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_accueil"
         app:layout_constraintVertical_bias="0.050000012" />
 
 

@@ -47,17 +47,12 @@ class AccueilFragment : Fragment(R.layout.fragment_accueil), IJoueur {
 
         var bouton_accueil_voter = view.findViewById<Button>(R.id.bouton_accueil_voter)
         bouton_accueil_voter.setOnClickListener {
-            //(requireActivity() as AccueilActivity).passerAuFragmentVote()
-
-            findNavController().navigate(R.id.voteJeuxFragment)
-
-            //view.findNavController().navigate(VoteJeuxFragmentDirections.actionAccueilFragmentToVoteJeuxFragment())
+            findNavController().navigate(R.id.action_accueilFragment_to_voteJeuxFragment)
         }
 
         var bouton_accueil_liste_jeux = view.findViewById<Button>(R.id.bouton_accueil_liste_jeux)
         bouton_accueil_liste_jeux.setOnClickListener {
-            //(requireActivity() as AccueilActivity).passerAuFragmentJeux()
-            findNavController().navigate(R.id.jeuxFragment)
+            findNavController().navigate(R.id.action_accueilFragment_to_jeuxFragment)
         }
 
         var bouton_add_joueur = view.findViewById<ImageButton>(R.id.bouton_add_joueur)

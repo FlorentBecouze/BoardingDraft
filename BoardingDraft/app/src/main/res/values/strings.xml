@@ -3,8 +3,12 @@
     <string name="app_name">BoardingDraft</string>
     <string name="bouton_lancer_vote">Voter</string>
     <string name="bouton_liste_jeux">Liste des jeux</string>
-    <string name="texte_joueurs">Joueurs présents :</string>
-    <string name="texte_liste">Saisir le nom du joueur</string>
-    <string name="texte_en_cours_de_developpement">Page en cours de développement</string>
+    <string name="texte_liste_joueurs">Joueurs présents :</string>
+    <string name="texte_saisie_nom_joueur">Saisir le nom du joueur</string>
+
+    <!-- Fragment vote -->
+    <string name="titre_fragment_vote">Vote</string>
+
+    <!-- Fragment jeux -->
     <string name="titre_fragment_jeux">Jeux</string>
 </resources>

@@ -16,8 +16,6 @@ import application.boardingdraft.Backend.BDD.AppDatabase
 
 class AccueilActivity : AppCompatActivity() {
 
-    var navController: NavController? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -26,27 +24,5 @@ class AccueilActivity : AppCompatActivity() {
 
         // Affichage de l'activity principale de l'application
         setContentView(R.layout.activity_accueil)
-
-        navController = findNavController(R.id.nav_host_fragment)
-
-        // Affichage du fragment contenu par l'activity principale de l'application
-        /*supportFragmentManager.commit{
-            replace<AccueilFragment>(R.id.fragment_accueil)
-        }*/
     }
-/*
-    fun passerAuFragmentVote() {
-        supportFragmentManager.commit{
-            replace<VoteJeuxFragment>(R.id.fragment_accueil)
-            addToBackStack(null)
-        }
-        //navController?.navigate(R.id.voteJeuxFragment)
-    }*/
-/*
-    fun passerAuFragmentJeux() {
-        supportFragmentManager.commit{
-            replace<JeuxFragment>(R.id.fragment_accueil)
-            addToBackStack(null)
-        }
-    }*/
 }
