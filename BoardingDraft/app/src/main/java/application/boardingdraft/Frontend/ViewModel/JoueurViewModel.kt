@@ -3,7 +3,6 @@ package application.boardingdraft.Frontend.ViewModel
 import android.app.Application
 import androidx.lifecycle.*
 import application.boardingdraft.Backend.BDD.AppDatabase
-import application.boardingdraft.Backend.DAL.JoueurDAO
 import application.boardingdraft.Backend.Repository.JoueurRepository
 import application.boardingdraft.Frontend.Model.Joueur
 import kotlinx.coroutines.launch

@@ -47,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/bouton_accueil_liste_jeux" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_accueil_liste_joueurs"
+        android:id="@+id/recycler_view_liste_joueurs"
         android:layout_width="match_parent"
         android:layout_height="260dp"
         app:layout_constraintBottom_toTopOf="@+id/saisie_joueur"

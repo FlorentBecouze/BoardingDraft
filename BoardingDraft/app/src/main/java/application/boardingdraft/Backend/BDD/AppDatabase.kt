@@ -4,12 +4,18 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import application.boardingdraft.Backend.DAL.Converters
+import application.boardingdraft.Backend.DAL.JeuDAO
 import application.boardingdraft.Backend.DAL.JoueurDAO
+import application.boardingdraft.Frontend.Model.Jeu
 import application.boardingdraft.Frontend.Model.Joueur
 
-@Database(entities = [Joueur::class], version = 1)
+@Database(entities = [Joueur::class, Jeu::class], version = 1, exportSchema = false)
+@TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun joueurDao(): JoueurDAO
+    abstract fun jeuDao(): JeuDAO
 
     companion object {
         // Singleton prevents multiple instances of database opening at the

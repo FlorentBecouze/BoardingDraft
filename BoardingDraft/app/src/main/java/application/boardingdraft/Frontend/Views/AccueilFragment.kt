@@ -5,43 +5,32 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.*
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.Observer
-import androidx.lifecycle.lifecycleScope
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.room.Room
-import application.boardingdraft.Backend.BDD.AppDatabase
-import application.boardingdraft.Backend.DAL.JoueurDAO
-import application.boardingdraft.Backend.Repository.JoueurRepository
 import application.boardingdraft.Frontend.Model.Joueur
 import application.boardingdraft.Frontend.ViewModel.JoueurViewModel
 import application.boardingdraft.Frontend.Views.List.IJoueur
 import application.boardingdraft.R
-import application.boardingdraft.Frontend.Views.List.ListAdapter
-import kotlinx.coroutines.launch
+import application.boardingdraft.Frontend.Views.List.ListAdapterJoueur
 
 class AccueilFragment : Fragment(R.layout.fragment_accueil), IJoueur {
 
     val joueurViewModel:JoueurViewModel by viewModels()
     var recyclerView:RecyclerView? = null
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_accueil_liste_joueurs)
-        recyclerView!!.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView!!.adapter = ListAdapter(emptyList(), this)
+        recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_liste_joueurs)
+        recyclerView?.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView?.adapter = ListAdapterJoueur(emptyList(), this)
 
         // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
         joueurViewModel.currentListeJoueurs.observe(viewLifecycleOwner) {
                 joueurs:List<Joueur> ->
-            (recyclerView!!.adapter!! as ListAdapter).listeJoueurs = joueurs
-            recyclerView!!.adapter!!.notifyDataSetChanged()
+            (recyclerView?.adapter!! as ListAdapterJoueur).listeJoueurs = joueurs
+            recyclerView?.adapter!!.notifyDataSetChanged()
         }
 
 
