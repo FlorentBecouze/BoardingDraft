@@ -15,8 +15,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/bouton_cellule_jeu"
+    <TextView
+        android:id="@+id/textView_cellule_jeu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginRight="10dp"
@@ -30,7 +30,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView_cellule_jeu"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
