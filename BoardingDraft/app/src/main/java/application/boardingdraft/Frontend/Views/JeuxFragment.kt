@@ -38,18 +38,19 @@ class JeuxFragment : Fragment(R.layout.fragment_jeux) {
 
                 Toast.makeText(context, "Position $position", Toast.LENGTH_SHORT).show()
                 Toast.makeText(context, "Jeu sélectionné : ${jeuSel.NomJeu}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Description : ${jeuSel.DescriptionJeu}", Toast.LENGTH_SHORT).show()
             }
         })
 
         jeuViewModel.currentListeJeux.observe(viewLifecycleOwner) {
                 jeux:List<Jeu> ->
+            // Si la liste est vide alors on créer les jeux. C'est possible lors du premier chargement de l'application
+            if (jeux.isEmpty()) {
+                creerJeux();
+            }
             (recyclerView?.adapter as ListAdapterJeu).listeJeux = jeux
             recyclerView?.adapter!!.notifyDataSetChanged()
         }
-
-        // Création de jeux à mettre dans la base
-        // A lancer qu'1 seule fois au premier téléchargement. Après commenter le code et recharger l'appli
-        //creerJeux();
     }
 
     private fun creerJeux() {
@@ -61,21 +62,21 @@ class JeuxFragment : Fragment(R.layout.fragment_jeux) {
         val image6: ImageView = ImageView(context)
         val image7: ImageView = ImageView(context)
 
-        image1.setImageResource(R.drawable.image_accueil)
-        image2.setImageResource(R.drawable.image_accueil)
-        image3.setImageResource(R.drawable.image_accueil)
-        image4.setImageResource(R.drawable.image_accueil)
-        image5.setImageResource(R.drawable.image_accueil)
-        image6.setImageResource(R.drawable.image_accueil)
-        image7.setImageResource(R.drawable.image_accueil)
+        image1.setImageResource(R.drawable.image_uno)
+        image2.setImageResource(R.drawable.image_le_president)
+        image3.setImageResource(R.drawable.image_la_bonne_paye)
+        image4.setImageResource(R.drawable.image_les_petits_chevaux)
+        image5.setImageResource(R.drawable.image_mikado)
+        image6.setImageResource(R.drawable.image_le_jeu_de_loie)
+        image7.setImageResource(R.drawable.image_phase_10)
 
-        listeJeux.add(Jeu(NomJeu = "UNO", DescriptionJeu = "Mettre une bonne description", Photo = genererBitMap(image1)))
-        listeJeux.add(Jeu(NomJeu = "Président", DescriptionJeu = "Mettre une bonne description", Photo = genererBitMap(image2)))
-        listeJeux.add(Jeu(NomJeu = "La bonne paye", DescriptionJeu = "Mettre une bonne description", Photo = genererBitMap(image3)))
-        listeJeux.add(Jeu(NomJeu = "Les petits chevaux", DescriptionJeu = "Mettre une bonne description", Photo = genererBitMap(image4)))
-        listeJeux.add(Jeu(NomJeu = "Mikado", DescriptionJeu = "Mettre une bonne description", Photo = genererBitMap(image5)))
-        listeJeux.add(Jeu(NomJeu = "Le jeu de l'oie", DescriptionJeu = "Mettre une bonne description", Photo = genererBitMap(image6)))
-        listeJeux.add(Jeu(NomJeu = "Phase 10", DescriptionJeu = "Mettre une bonne description", Photo = genererBitMap(image7)))
+        listeJeux.add(Jeu(NomJeu = getString(R.string.titre_jeu_UNO), DescriptionJeu = getString(R.string.desc_jeu_UNO), Photo = genererBitMap(image1)))
+        listeJeux.add(Jeu(NomJeu = getString(R.string.titre_jeu_president), DescriptionJeu = getString(R.string.desc_jeu_president), Photo = genererBitMap(image2)))
+        listeJeux.add(Jeu(NomJeu = getString(R.string.titre_jeu_bonne_paye), DescriptionJeu = getString(R.string.desc_jeu_bonne_paye), Photo = genererBitMap(image3)))
+        listeJeux.add(Jeu(NomJeu = getString(R.string.titre_jeu_petits_chevaux), DescriptionJeu = getString(R.string.desc_jeu_petits_chevaux), Photo = genererBitMap(image4)))
+        listeJeux.add(Jeu(NomJeu = getString(R.string.titre_jeu_mikado), DescriptionJeu = getString(R.string.desc_jeu_mikado), Photo = genererBitMap(image5)))
+        listeJeux.add(Jeu(NomJeu = getString(R.string.titre_jeu_oie), DescriptionJeu = getString(R.string.desc_jeu_oie), Photo = genererBitMap(image6)))
+        listeJeux.add(Jeu(NomJeu = getString(R.string.titre_jeu_phase_10), DescriptionJeu = getString(R.string.desc_jeu_phase_10), Photo = genererBitMap(image7)))
 
         listeJeux.forEach { it ->
             jeuViewModel.insererJeu(it)

@@ -11,4 +11,98 @@
 
     <!-- Fragment jeux -->
     <string name="titre_fragment_jeux">Jeux</string>
+        <!-- Titres des jeux -->
+    <string name="titre_jeu_UNO">UNO</string>
+    <string name="titre_jeu_president">Président</string>
+    <string name="titre_jeu_bonne_paye">La bonne paye</string>
+    <string name="titre_jeu_petits_chevaux">Les petits chevaux</string>
+    <string name="titre_jeu_mikado">Mikado</string>
+    <string name="titre_jeu_oie">Le jeu de l\'oie</string>
+    <string name="titre_jeu_phase_10">Phase 10</string>
+        <!-- Descriptions des jeux -->
+    <string name="desc_jeu_UNO">Mélanger soigneusement les cartes et en distribuer le même nombre à chaque joueur.
+        Faire une pile avec le reste des cartes, faces cachées : elle constituera LA PIOCHE.
+        Retourner la première carte de la pioche, pour la poser face visible à côté de la pioche,
+        afin de commencer LE TALON. Cette carte servira comme base de départ.
+        Le joueur qui commence doit recouvrir la carte supérieure du talon par une carte de la même couleur,
+        ou portant le même numéro ou le même symbole que celle-ci. Par exemple, si la carte supérieure du talon
+        est un 7 rouge, il peut jouer n\'importe quelle carte rouge ou un 7 de n\'importe quelle couleur.
+        Il peut également jouer une carte JOKER.
+        Si le joueur ne possède pas de cartes lui offrant une de ces possibilités, il doit alors tirer la carte supérieure
+        de la pioche. Si cette carte peut être jouée, il peut alors la jouer immédiatemment en la posant sur le talon ;
+        sinon il passe son tour, en conservant bien évidemment cette carte supplémentaire.
+        Le joueur qui s\'est débarrassé le premier de toutes ses cartes est le vainqueur de la manche. On établit les scores de cette manche
+        et on engage alors la manche suivante.</string>
+    <string name="desc_jeu_president">Le \"président\", aussi appelé \"trou du cul\" ou \"trouduc\", est un jeu de cartes
+        se jouant à quatre joueurs ou davantage, avec un jeu de 32 ou de 54 cartes.
+        Le but de chaque joueur est de se débarrasser le plus rapidement possible de la totalité de ses cartes.
+        Les joueurs ayant été les plus rapides à se débarrasser de leurs cartes ont droit à un avantage pour la partie suivante
+        et inversement les plus lents se verront pénalisés par un handicap. L\'intérêt de ce jeu est donc d\enchaîner plusieurs
+        parties à la suite afin de voir les joueurs évoluer dans le classement.
+        Lors du déroulement du jeu, la force relative des cartes est dans cet ordre (de la plus faible à la plus forte) :
+        3, 4, 5, 6, 7, 8, 9, 10, Valet, Dame, Roi, As, 2 et, le cas échéant, Joker.
+        Si une partie se joue avec un nombre réduit de cartes (32 cartes pour 4 joueurs et 30 cartes pour 3 joueurs), il est préférable d\'appliquer
+        l\'ordre : 8, 9, 10, Valet, Dame, Roi, As, 7.</string>
+    <string name="desc_jeu_bonne_paye">Les joueurs jettent un dé à tour de rôle pour se déplacer sur le parcours. En fonction de la case où ils tombent,
+        ils doivent tirer une carte, payer ou recevoir de l\'argent.
+        Chaque case est une journée du mois, et à la fin du mois, les joueurs reçoivent leur paye et doivent régler leurs factures.
+        Le but du jeu est d\'être le joueur ayant accumulé le plus d\'argent (ou que les autres n\'en aient plus), à l\'aide de différentes méthodes.</string>
+    <string name="desc_jeu_petits_chevaux">Le jeu des \"petits chevaux\" est un jeu qui consiste à déplacer plusieurs pions
+        (dits chevaux) par joueur (entre 1 et 3 par joueurs en général), et à les emmener sur la partie réservée à leur couleur.
+        Le premier joueur qui arrive sur la dernière case triangulaire remporte la partie.
+        Deux à quatre joueurs disposent chacun d\'un ou plusieurs pions-chevaux, et jouent en lançant un dé à tour de rôle.
+        Un joueur doit d\'abord réaliser un 6 avec le dé pour pouvoir sortir un cheval de son écurie. Il doit ensuite lui faire parcourir
+        toutes les cases situées à la périphérie du plateau, en le faisant avancer d\'un nombre de cases égal au résultat du dé.
+        Les pions sont avancés dans le sens des aiguilles d\'une montre.
+        Il existe différents cas particuliers. Ainsi, lorsqu\'un cheval arrive sur une case occupée par un concurrent, il le renvoie dans son écurie (le départ).
+        En revanche, si le joueur arrive sur une case occupée par un autre cheval de sa couleur, il arrête son pion juste derrière.
+        Enfin, un 6 obtenu sur le dé permet de rejouer.
+        Après que son pion ait fait le tour du plateau, le joueur doit faire le chiffre exact sur le dé de sorte à ce qu\'il s\'arrête devant son escalier.
+        Par exemple, si le pion-cheval est situé à trois cases du bas de l\'escalier, le joueur doit obtenir un 3 sur son dé pour
+        emmener son pion en bas de l\'escalier. Si le chiffre est trop grand, il avance son pion jusqu’à la case du bas de l\'escalier,
+        puis le recule du nombre de cases correspondant à la différence entre le chiffre à faire et le chiffre fait ; en reprenant l\'exemple :
+        si le joueur obtient 4 avec le dé, il avancera le pion de trois cases, puis le reculera d\'une case.
+        Une fois que le pion d\'un joueur se trouve dans la case située devant l\'escalier de sa couleur,
+        il doit remonter marche par marche jusqu\'au centre du jeu. Pour cela, le joueur doit obtenir à chaque fois le chiffre exact
+        inscrit dans la case, et un 6 pour arriver à la coupe.
+        La victoire est remportée par le premier joueur qui arrive à amener, selon les variantes, un ou plusieurs de ses pions-chevaux à la coupe.
+        Chaque joueur est libre de faire sortir le nombre de chevaux qu\'il désire, mais il ne peut déplacer qu\'un seul cheval par tour.</string>
+    <string name="desc_jeu_mikado">Le \"Mikado\" est un jeu d\'adresse, praticable de 2 à 6 joueurs. Il se compose d\'un ensemble de baguettes,
+        longues d\'environ 20 cm et effilées aux extrémités, qu\'on laisse tomber de façon qu\'elles s\'enchevêtrent, avant de les retirer,
+        une à une, sans faire bouger les autres.
+        Il existe de nombreuses variantes de Mikado, aussi les valeurs et les couleurs mentionnées sont purement indicatives. Un jeu comporte généralement les pièces suivantes :
+        1 baguette Mikado, valeur 20 points (couleur noire)
+        5 baguettes Samouraï, valeur 10 points chacune (couleur jaune)
+        5 baguettes Mandarin, valeur 5 points chacune (couleur bleue)
+        15 baguettes Bonze, valeur 3 points chacune (couleur verte)
+        15 baguettes Coolie, valeur 2 points chacune (couleur rouge)
+        Avant de commencer la partie, on tient les baguettes serrées dans le poing et on les laisse tomber, en éventail, sur une table ou sur le sol.
+        Chaque joueur doit alors retirer une baguette de son choix. Il ne doit en aucun cas toucher ou déplacer une autre baguette.
+        Tant qu\'il y parvient, il peut continuer à retirer d\'autres baguettes. Dès qu\'il déplace une autre baguette par inadvertance,
+        il cède son tour au joueur suivant.
+        À la fin de la partie, le gagnant est celui qui a cumulé le plus de points.
+        Il est souvent possible de s\'aider d\'une baguette que l\'on a déjà récupérée pour en retirer une autre.
+        Dans certaines variantes, cette possibilité est néanmoins réservée à la seule baguette Mikado.</string>
+    <string name="desc_jeu_oie">Le \"jeu de l\'oie\" est un jeu de société de parcours où l\'on déplace des pions en fonction des résultats de deux dés.
+         Traditionnellement, ce jeu de hasard pur comprend 63 cases disposées en spirale enroulée vers l\'intérieur et comportant un certain nombre de pièges.
+         Le but est d\'arriver le premier à la dernière case.</string>
+    <string name="desc_jeu_phase_10">\"Phase 10\" est une sorte de \"Rami\" évolué, aux règles simples et astucieuses.
+        La différence fondamentale, ce sont les 10 phases. Vous devez, manche après manche, réaliser ces 10 figures imposées dans l\'ordre :
+        1 : 2 brelans
+        2 : 1 brelan + 1 suite de 4
+        3 : 1 carré + 1 suite de 4
+        4 : 1 suite de 7
+        5 : 1 suite de 8
+        6 : 1 suite de 9
+        7 : 2 carrés
+        8 : 7 cartes de même couleur
+        9 : 1 poker + 1 paire
+        10 : 1 poker + 1 brelan
+        Le jeu se compose de 108 cartes : 2 x (1 à 12 en 4 couleurs), 4 x « passer un tour », et 8 jokers.
+        Au premier tour, tous les joueurs doivent réaliser la phase 1, soit 2 brelans. Dès qu\'un joueur a posé toutes ses cartes,
+        la manche est terminée. Tous les joueurs marquent des points négatifs, selon les cartes qui leur restent en main,
+        puis on attaque la manche suivante. Tout ceux qui ont réussi leur phase en cours passent alors à la phase suivante.
+        Les autres recommencent la phase dans laquelle ils ont échoué.
+        Les phases étant de difficulté croissante, les joueurs en retard peuvent rattraper leurs adversaires.</string>
+
 </resources>
