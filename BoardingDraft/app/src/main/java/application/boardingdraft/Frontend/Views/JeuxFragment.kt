@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.viewModels
+import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -36,9 +37,7 @@ class JeuxFragment : Fragment(R.layout.fragment_jeux) {
             override fun onButtonJeuClickedListener(position: Int) {
                 var jeuSel: Jeu = (recyclerView?.adapter as ListAdapterJeu).listeJeux[position]
 
-                Toast.makeText(context, "Position $position", Toast.LENGTH_SHORT).show()
-                Toast.makeText(context, "Jeu sélectionné : ${jeuSel.NomJeu}", Toast.LENGTH_SHORT).show()
-                Toast.makeText(context, "Description : ${jeuSel.DescriptionJeu}", Toast.LENGTH_SHORT).show()
+                findNavController().navigate(JeuxFragmentDirections.actionJeuxFragmentToJeuxInfosFragment(jeuSel.NomJeu, jeuSel.DescriptionJeu, jeuSel.Photo))
             }
         })
 

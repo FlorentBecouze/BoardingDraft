@@ -3,6 +3,7 @@ package application.boardingdraft.Frontend.Views
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import application.boardingdraft.R
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace

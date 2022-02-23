@@ -7,7 +7,7 @@
     tools:context=".Frontend.Views.AccueilFragment">
 
     <TextView
-        android:id="@+id/titreTextView"
+        android:id="@+id/titreAccueilTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -29,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titreTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/titreAccueilTextView" />
 
 
     <TextView

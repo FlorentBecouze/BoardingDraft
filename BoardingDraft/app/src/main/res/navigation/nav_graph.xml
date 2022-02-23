@@ -26,5 +26,24 @@
         android:id="@+id/jeuxFragment"
         android:name="application.boardingdraft.Frontend.Views.JeuxFragment"
         android:label="fragment_jeux"
-        tools:layout="@layout/fragment_jeux" />
+        tools:layout="@layout/fragment_jeux" >
+        <action
+            android:id="@+id/action_jeuxFragment_to_jeuxInfosFragment"
+            app:destination="@id/jeuxInfosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jeuxInfosFragment"
+        android:name="application.boardingdraft.Frontend.Views.JeuxInfosFragment"
+        android:label="fragment_jeux_infos"
+        tools:layout="@layout/fragment_jeux_infos" >
+        <argument
+            android:name="titre_jeu"
+            app:argType="string" />
+        <argument
+            android:name="desc_jeu"
+            app:argType="string" />
+        <argument
+            android:name="photo_jeu"
+            app:argType="android.graphics.Bitmap" />
+    </fragment>
 </navigation>
