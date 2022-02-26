@@ -8,6 +8,7 @@
 
     <!-- Fragment vote -->
     <string name="titre_fragment_vote">Vote</string>
+    <string name="texte_fragment_vote">Page en cours de construction. Voici quelques photos de nos amis félins pour vous faire patienter.</string>
 
     <!-- Fragment jeux -->
     <string name="titre_fragment_jeux">Jeux</string>
