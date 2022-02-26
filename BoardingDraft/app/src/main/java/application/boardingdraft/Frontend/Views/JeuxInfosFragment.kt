@@ -6,7 +6,6 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.fragment.navArgs
-import application.boardingdraft.Frontend.Model.Jeu
 import application.boardingdraft.R
 
 class JeuxInfosFragment : Fragment(R.layout.fragment_jeux_infos) {

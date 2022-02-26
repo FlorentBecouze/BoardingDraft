@@ -7,14 +7,10 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.*
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
 import application.boardingdraft.R
 import coil.ImageLoader
 import coil.request.ImageRequest
-import io.ktor.http.*
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 class VoteJeuxFragment : Fragment(R.layout.fragment_vote_jeux) {
 

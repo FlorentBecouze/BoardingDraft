@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Home -->
+    <string name="app_name">BoardingDraft</string>
+    <string name="bouton_lancer_vote">Vote</string>
+    <string name="bouton_liste_jeux">List of games</string>
+    <string name="texte_liste_joueurs">Players present:</string>
+    <string name="texte_saisie_nom_joueur">Enter player name</string>
+
+    <!-- Voting fragment -->
+    <string name="titre_fragment_vote">Vote</string>
+    <string name="texte_fragment_vote">Page is under construction. Here are some pictures of our feline friends to keep you waiting.</string>
+
+    <!-- Games fragment -->
+    <string name="titre_fragment_jeux">Games</string>
+    <!-- Game titles -->
+    <string name="titre_jeu_UNO">UNO</string>
+    <string name="titre_jeu_president">President</string>
+    <string name="titre_jeu_bonne_paye">The good pay</string>
+    <string name="titre_jeu_petits_chevaux">The little horses</string>
+    <string name="titre_jeu_mikado">Mikado</string>
+    <string name="titre_jeu_oie">The game of the goose</string>
+    <string name="titre_jeu_phase_10">Stage 10</string>
+    <!-- Game Descriptions -->
+    <string name="desc_jeu_UNO">Carefully shuffle the cards and deal the same number to each player.
+        Make a pile with the rest of the cards, face down: this will constitute THE DRAW PILE.
+        Turn over the top card of the draw pile, to place it face up next to the draw pile,
+        to start LE TALON. This map will serve as a starting point.
+        The starting player must cover the top card of the stock pile with a card of the same suit,
+        or bearing the same number or the same symbol as it. For example, if the top card of the stock
+        is a red 7, he can play any red card or a 7 of any suit.
+        He can also play a JOKER card.
+        If the player does not have any cards offering one of these possibilities, he must then draw the top card
+        from the draw pile. If this card can be played, then he can play it immediately by placing it on his stock;
+        otherwise he passes his turn, obviously keeping this additional card.
+        The player who gets rid of all his cards first is the winner of the round. We establish the scores of this round
+        and we then start the next round.</string>
+    <string name="desc_jeu_president">The \"president\", also called \"asshole\", is a card game
+        played with four or more players, with a deck of 32 or 54 cards.
+        The goal of each player is to get rid of all their cards as quickly as possible.
+        The players who were the fastest to get rid of their cards are entitled to an advantage for the next game
+        and conversely the slowest will be penalized by a handicap. The interest of this game is therefore to chain several
+        games in a row in order to see the players evolve in the classification.
+        As the game progresses, the relative strength of the cards is in this order (from weakest to strongest):
+        3, 4, 5, 6, 7, 8, 9, 10, Jack, Queen, King, Ace, 2 and, if applicable, Joker.
+        If a game is played with a reduced number of cards (32 cards for 4 players and 30 cards for 3 players), it is preferable to apply
+        the order: 8, 9, 10, Jack, Queen, King, Ace, 7.</string>
+    <string name="desc_jeu_bonne_paye">Players take turns rolling a dice to move around the course. Depending on the square where they fall,
+        they have to draw a card, pay or receive money.
+        Each box is a day of the month, and at the end of the month, players receive their pay and must settle their bills.
+        The object of the game is to be the player with the most money (or the others to run out), using different methods.</string>
+    <string name="desc_jeu_petits_chevaux">The \"little horses\" game is a game that consists of moving several pawns
+        (known as horses) per player (between 1 and 3 per player in general), and to take them to the part reserved for their color.
+        The first player to reach the last triangular square wins the game.
+        Two to four players each have one or more horse pawns, and play by rolling a dice in turn.
+        A player must first roll a 6 with the dice in order to take a horse out of his stable. He must then make it go through
+        all the squares located at the periphery of the board, moving it forward a number of squares equal to the result of the die.
+        Pawns are advanced clockwise.
+        There are different special cases. Thus, when a horse arrives on a square occupied by a competitor, he sends him back to his stable (the start).
+        On the other hand, if the player arrives on a square occupied by another horse of his color, he stops his pawn just behind it.
+        Finally, a 6 obtained on the dice allows replay.
+        After his pawn has gone around the board, the player must make the exact number on the die so that he stops in front of his staircase.
+        For example, if the horse pawn is located three spaces from the bottom of the stairs, the player must roll a 3 on his die to
+        take his pawn down the stairs. If the number is too big, he moves his pawn to the bottom square of the stairs,
+        then moves it back the number of squares corresponding to the difference between the figure to be made and the figure made; taking the example:
+        if the player rolls a 4, he will move the pawn three spaces forward, then move it back one space.
+        Once a player\'s pawn is in the space in front of the stairs of his color,
+        he must go up step by step to the center of the game. For this, the player must obtain each time the exact figure
+        entered in the box, and a 6 to reach the cut.
+        Victory is won by the first player who manages to bring, depending on the variant, one or more of his horse-pawns to the cup.
+        Each player is free to bring out the number of horses he wishes, but he can only move one horse per turn.</string>
+    <string name="desc_jeu_mikado">\"Mikado\" is a game of skill, played by 2 to 6 players. It consists of a set of chopsticks,
+        about 20 cm long and tapered at the ends, which are dropped so that they become entangled, before removing them,
+        one by one, without moving the others.
+        There are many variants of Mikado, so the values and colors mentioned are purely indicative. A game usually consists of the following pieces:
+        1 Mikado chopsticks, worth 20 points (black color)
+        5 Samurai chopsticks, worth 10 points each (yellow color)
+        5 Mandarin chopsticks, worth 5 points each (blue color)
+        15 Bonze chopsticks, worth 3 points each (green color)
+        15 Coolie chopsticks, worth 2 points each (color red)
+        Before starting the game, the sticks are held clenched in the fist and they are dropped, fanned out, on a table or on the ground.
+        Each player must then remove a stick of their choice. Under no circumstances should he touch or move another chopsticks.
+        As long as he succeeds, he can continue to remove other wands. As soon as he inadvertently moves another chopsticks,
+        he yields his turn to the next player.
+        At the end of the game, the winner is the one who has accumulated the most points.
+        It is often possible to use a chopsticks that has already been retrieved to remove another.
+        In some variants, this possibility is nevertheless reserved for the Mikado chopsticks only.</string>
+    <string name="desc_jeu_oie">The \"game of the goose\" is a parlor game where pawns are moved according to the results of two dice.
+         Traditionally, this game of pure chance comprises 63 squares arranged in an inwardly wound spiral with a number of traps.
+         The goal is to get to the last square first.</string>
+    <string name="desc_jeu_phase_10">\"Phase 10\" is a sort of evolved \"Rummy\", with simple and clever rules.
+        The fundamental difference is the 10 phases. You must, round after round, perform these 10 compulsory figures in order:
+        1 : 2 sets
+        2 : 1 set + 1 suite of 4
+        3 : 1 square + 1 suite of 4
+        4 : 1 suite of 7
+        5 : 1 suite of 8
+        6 : 1 suite of 9
+        7 : 2 squares
+        8 : 7 cards of the same color
+        9 : 1 poker + 1 pair
+        10 : 1 poker + 1 set
+        The game consists of 108 cards: 2 x (1 to 12 in 4 colors), 4 x "skip a turn", and 8 jokers.
+        In the first round, all players must perform phase 1, i.e. 2 sets. As soon as a player has played all his cards,
+        the round is over. All players score negative points, depending on the cards left in their hand,
+        then we attack the next round. All those who have succeeded in their current phase then move on to the next phase.
+        The others restart the phase in which they failed.
+        The phases being of increasing difficulty, late players can catch up with their opponents.</string>
+
+</resources>
