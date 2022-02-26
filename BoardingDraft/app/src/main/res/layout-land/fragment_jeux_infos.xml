@@ -4,59 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Frontend.Views.VoteJeuxFragment">
+    tools:context=".Frontend.Views.JeuxInfosFragment">
 
     <TextView
-        android:id="@+id/titreVoteTextView"
+        android:id="@+id/titreJeuxInfosTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/titre_fragment_vote"
         android:textColor="@color/orange"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView_en_cours_de_construction"
+        android:id="@+id/imageView_jeux_infos"
         android:layout_width="0dp"
-        android:layout_height="400dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="13dp"
         android:layout_gravity="center_horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/titreJeuxInfosTextView" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:text="@string/texte_fragment_vote"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_en_cours_de_construction" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_jeux_infos">
 
-
-    <ImageButton
-        android:id="@+id/bouton_rafraichissement_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="60dp"
-        android:backgroundTint="@color/white"
-        android:src="@android:drawable/ic_popup_sync"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/titreVoteTextView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/black" />
-
+        <TextView
+            android:id="@+id/descJeuxInfosTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:textSize="15sp" />
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

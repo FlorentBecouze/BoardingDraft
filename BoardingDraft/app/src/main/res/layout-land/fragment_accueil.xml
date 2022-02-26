@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Frontend.Views.AccueilFragment">
+
+    <TextView
+        android:id="@+id/titreAccueilTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/app_name"
+        android:textColor="@color/orange"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_accueil"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginRight="400dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/image_accueil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titreAccueilTextView" />
+
+
+    <TextView
+        android:id="@+id/joueurTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/texte_liste_joueurs"
+        android:textColor="@color/gris"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView_accueil"
+        app:layout_constraintTop_toBottomOf="@+id/bouton_accueil_liste_jeux" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_liste_joueurs"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toTopOf="@+id/saisie_joueur"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView_accueil"
+        app:layout_constraintTop_toBottomOf="@+id/joueurTextView" />
+
+    <EditText
+        android:id="@+id/saisie_joueur"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="80dp"
+        android:hint="@string/texte_saisie_nom_joueur"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/bouton_add_joueur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <Button
+        android:id="@+id/bouton_accueil_voter"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/orange_fonce"
+        android:text="@string/bouton_lancer_vote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bouton_accueil_liste_jeux"
+        app:layout_constraintTop_toBottomOf="@+id/titreAccueilTextView" />
+
+    <Button
+        android:id="@+id/bouton_accueil_liste_jeux"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="260dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/orange_fonce"
+        android:text="@string/bouton_liste_jeux"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView_accueil"
+        app:layout_constraintTop_toBottomOf="@+id/titreAccueilTextView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
