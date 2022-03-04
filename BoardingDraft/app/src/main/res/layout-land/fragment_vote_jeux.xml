@@ -33,7 +33,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/texte_fragment_vote"
+        android:text="@string/texte_en_cours_de_construction"
         android:textSize="15sp"
         android:textAlignment="center"
         android:layout_marginRight="20dp"

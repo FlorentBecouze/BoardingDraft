@@ -14,15 +14,16 @@ import application.boardingdraft.Frontend.Model.Joueur
 @Database(entities = [Joueur::class, Jeu::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
+    // Création unique pour la classe "AppDatabase", des objets suivants
     abstract fun joueurDao(): JoueurDAO
     abstract fun jeuDao(): JeuDAO
 
     companion object {
-        // Singleton prevents multiple instances of database opening at the
-        // same time.
+
         @Volatile
         private var INSTANCE: AppDatabase? = null
 
+        // Méthode permettant d'empêcher de multiples instances de l'objet "AppDatabase" en même temps.
         fun getDatabase(context: Context): AppDatabase {
             // if the INSTANCE is not null, then return it,
             // if it is, then create the database

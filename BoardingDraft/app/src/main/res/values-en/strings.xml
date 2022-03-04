@@ -9,7 +9,8 @@
 
     <!-- Voting fragment -->
     <string name="titre_fragment_vote">Vote</string>
-    <string name="texte_fragment_vote">Page is under construction. Here are some pictures of our feline friends to keep you waiting.</string>
+    <string name="texte_en_cours_de_construction">Page is under construction. Here are some pictures of our feline friends to keep you waiting.</string>
+    <string name="texte_toast_pas_internet">Please connect to the internet to view the images.</string>
 
     <!-- Games fragment -->
     <string name="titre_fragment_jeux">Games</string>

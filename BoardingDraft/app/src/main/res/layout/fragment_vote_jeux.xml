@@ -36,7 +36,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:text="@string/texte_fragment_vote"
+        android:text="@string/texte_en_cours_de_construction"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

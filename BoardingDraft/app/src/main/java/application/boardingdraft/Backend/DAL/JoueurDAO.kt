@@ -6,6 +6,9 @@ import androidx.room.Insert
 import androidx.room.Query
 import application.boardingdraft.Frontend.Model.Joueur
 
+// DAO : Data Access Object     DAL : Data Access Layer
+// Cette interface est la dernière couche avant la BDD et c'est elle qui y est directement connectée.
+// Elle lance les différentes procédures SQL.
 @Dao
 interface JoueurDAO {
     // Ces méthodes ne sont pas en "suspend" car elles retournent des LiveData

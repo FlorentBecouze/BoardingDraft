@@ -16,17 +16,19 @@ import application.boardingdraft.Frontend.Views.List.ListAdapterJoueur
 
 class AccueilFragment : Fragment(R.layout.fragment_accueil), IJoueur {
 
+    // Accès aux méthodes de récupération / modifications de données de la BDD.
     val joueurViewModel:JoueurViewModel by viewModels()
     var recyclerView:RecyclerView? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Lien entre la recyclerView affichée et son adaptateur
         recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_liste_joueurs)
         recyclerView?.layoutManager = LinearLayoutManager(requireContext())
         recyclerView?.adapter = ListAdapterJoueur(emptyList(), this)
 
-        // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
+        // Observation en directe de la liste des joueurs
         joueurViewModel.currentListeJoueurs.observe(viewLifecycleOwner) {
                 joueurs:List<Joueur> ->
             (recyclerView?.adapter!! as ListAdapterJoueur).listeJoueurs = joueurs
@@ -36,28 +38,37 @@ class AccueilFragment : Fragment(R.layout.fragment_accueil), IJoueur {
 
         var bouton_accueil_voter = view.findViewById<Button>(R.id.bouton_accueil_voter)
         bouton_accueil_voter.setOnClickListener {
+            // Affichage du fragment de "vote"
             findNavController().navigate(R.id.action_accueilFragment_to_voteJeuxFragment)
         }
 
         var bouton_accueil_liste_jeux = view.findViewById<Button>(R.id.bouton_accueil_liste_jeux)
         bouton_accueil_liste_jeux.setOnClickListener {
+            // Affichage du fragment de "jeux"
             findNavController().navigate(R.id.action_accueilFragment_to_jeuxFragment)
         }
 
         var bouton_add_joueur = view.findViewById<ImageButton>(R.id.bouton_add_joueur)
         bouton_add_joueur.setOnClickListener {
+            // Récupération du texte saisi par l'utilisateur
             val nameNewJoueur: String = view.findViewById<EditText>(R.id.saisie_joueur).text.toString()
-            // Si le champs est rempli et que le premier caractère n'est pas un espace
+
+            // Si le champs est rempli et que les premiers caractères ne sont pas des espaces
             if(nameNewJoueur != "" && nameNewJoueur.get(0) != ' ') {
                 val textView = view.findViewById<EditText>(R.id.saisie_joueur)
 
+                // Insertion du nouveau joueur dans la BDD
                 joueurViewModel.insererJoueur(Joueur(PrenomJoueur = textView.text.toString()))
+
+                // Suppression du texte dans le champs de saisie
                 textView.text.clear()
             }
         }
     }
 
+    // Implémentation de la méthode de l'interface "IJoueur"
     override fun onButtonSuppJoueurClicked(joueur: Joueur) {
+        // Suppression du joueur dans la BDD
         joueurViewModel.supprimerJoueur(joueur)
     }
 

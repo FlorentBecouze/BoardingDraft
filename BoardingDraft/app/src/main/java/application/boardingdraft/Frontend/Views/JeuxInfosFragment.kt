@@ -10,6 +10,7 @@ import application.boardingdraft.R
 
 class JeuxInfosFragment : Fragment(R.layout.fragment_jeux_infos) {
 
+    // Attribut servant à récupérer les arguments passés lors de l'affichage de ce fragment
     private val args : JeuxInfosFragmentArgs by navArgs<JeuxInfosFragmentArgs>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

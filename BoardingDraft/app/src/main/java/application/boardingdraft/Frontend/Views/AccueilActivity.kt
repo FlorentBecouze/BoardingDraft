@@ -9,7 +9,7 @@ class AccueilActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Cacher l'entete de l'application pour la mettre en fullscreen
+        // Cacher l'entête de l'application pour la mettre en fullscreen
         this.getSupportActionBar()!!.hide();
 
         // Affichage de l'activity principale de l'application
