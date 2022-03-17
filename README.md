@@ -1,24 +1,22 @@
 # BoardingDraft
 
-<br/><br/><br/><br/>
-Plan :
-  * Version de Kotlin / SDK / ...
-  * Explications du projet initial, mais pas eu le temps
-  * Utilisation d'une architecture
-  * Mettre les images de chaque page (verticale, horizontale) + explications
-    <br/>
-    Ex :<br/>
-      * Image accueil verticale			Image accueil horizontale
+Cette application a été développée en **Kotlin** lors d'un projet Android de 3ème année à l'ISIMA.
 
-      Ici, il est possible d'ajouter / supprimer des joueurs, ...
-  * Améliorations possibles
-    <br/>
-    Ex :<br/>
-      * Développer le reste de l'application (vote / résultat)<br/>
-      * Mettre un système pour ajouter un jeu<br/>
-      * ComboBox pour sélectionner la langue française ou anglaise<br/>
-      * Mettre une musique d'ambiance<br/>
-      * Mettre plus de jeux dans la BDD
+### Spécifications techniques :
+* Développé sur : Android Studio Arctic Fox | 2020.3.1 Patch 4
+* Version plugin de Kotlin : 203-1.5.20-release-289-AS7717.8
+* Android SDK : 32
+
+---
+
+### Objectif :
+Le but final de ce projet était de mettre en place une application pour téléphone, permettant à des personnes de voter pour le jeu de société auquel ils souhaiteraient jouer.
+Chacun leur tour, elles prennent le téléphone pour sélectionner les jeux voulus.
+
+Le processus devait être le suivant :
+* Lors de l'ouverture de l'application, ajout des différentes personnes présentes pour jouer.
+* 
+
 
 
 <p align="center">
@@ -55,6 +53,7 @@ Plan :
 <p align="center">
     <img src="Ressources/Vote_vertical.jpg" width="150"/>
     <img src="Ressources/Vote_horizontal.jpg" width="300"/>
+    <img src="Ressources/Vote_vertical_sans_Internet.jpg" width="150"/>
 </p>
 
 
