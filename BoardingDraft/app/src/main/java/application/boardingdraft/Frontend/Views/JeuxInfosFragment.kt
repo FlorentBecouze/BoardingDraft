@@ -16,9 +16,9 @@ class JeuxInfosFragment : Fragment(R.layout.fragment_jeux_infos) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var textViewTitre: TextView = view.findViewById<TextView>(R.id.titreJeuxInfosTextView)
-        var imageViewJeuInfo: ImageView = view.findViewById<ImageView>(R.id.imageView_jeux_infos)
-        var textViewDesc: TextView = view.findViewById<TextView>(R.id.descJeuxInfosTextView)
+        val textViewTitre: TextView = view.findViewById<TextView>(R.id.titreJeuxInfosTextView)
+        val imageViewJeuInfo: ImageView = view.findViewById<ImageView>(R.id.imageView_jeux_infos)
+        val textViewDesc: TextView = view.findViewById<TextView>(R.id.descJeuxInfosTextView)
 
         textViewTitre.text = args.titreJeu
         imageViewJeuInfo.setImageBitmap(args.photoJeu)

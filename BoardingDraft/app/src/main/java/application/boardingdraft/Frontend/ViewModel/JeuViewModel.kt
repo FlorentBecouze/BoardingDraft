@@ -15,7 +15,7 @@ class JeuViewModel(application: Application) : AndroidViewModel(application) {
 
     private val jeuRepository: JeuRepository by lazy { JeuRepository(database.jeuDao()) }
 
-    // Liste observée qui se mettre à jour automatiquement lors d'une modification dans la BDD.
+    // Liste observée qui se met à jour automatiquement lors d'une modification dans la BDD.
     val currentListeJeux: LiveData<List<Jeu>> by lazy {
         jeuRepository.getAllJeu()
     }

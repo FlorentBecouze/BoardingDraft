@@ -10,7 +10,7 @@ class AccueilActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         // Cacher l'entête de l'application pour la mettre en fullscreen
-        this.getSupportActionBar()!!.hide();
+        this.getSupportActionBar()!!.hide()
 
         // Affichage de l'activity principale de l'application
         setContentView(R.layout.activity_accueil)

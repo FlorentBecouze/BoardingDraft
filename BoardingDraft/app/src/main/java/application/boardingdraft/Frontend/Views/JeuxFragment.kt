@@ -25,7 +25,7 @@ class JeuxFragment : Fragment(R.layout.fragment_jeux) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var adapter = ListAdapterJeu(emptyList())
+        val adapter = ListAdapterJeu(emptyList())
 
         // Lien entre la recyclerView affichée et son adaptateur
         recyclerView = view.findViewById<RecyclerView>(R.id.recycler_view_liste_jeux)
@@ -36,7 +36,7 @@ class JeuxFragment : Fragment(R.layout.fragment_jeux) {
         adapter.setOnButtonJeuClickedListener(object :ListAdapterJeu.IJeu {
             override fun onButtonJeuClickedListener(position: Int) {
                 // Récupération du jeu sélectionné
-                var jeuSel: Jeu = (recyclerView?.adapter as ListAdapterJeu).listeJeux[position]
+                val jeuSel: Jeu = (recyclerView?.adapter as ListAdapterJeu).listeJeux[position]
 
                 // Affichage du fragment des "infos d'un jeu", en passant au fragment les données à afficher
                 findNavController().navigate(JeuxFragmentDirections.actionJeuxFragmentToJeuxInfosFragment(jeuSel.NomJeu, jeuSel.DescriptionJeu, jeuSel.Photo))
@@ -49,7 +49,7 @@ class JeuxFragment : Fragment(R.layout.fragment_jeux) {
             // Si la liste est vide alors on crée les jeux
             // C'est possible lors de la première ouverture de l'application
             if (jeux.isEmpty()) {
-                creerJeux();
+                creerJeux()
             }
             (recyclerView?.adapter as ListAdapterJeu).listeJeux = jeux
             recyclerView?.adapter!!.notifyDataSetChanged()

@@ -7,10 +7,12 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.*
+import androidx.lifecycle.lifecycleScope
 import application.boardingdraft.R
 import coil.ImageLoader
 import coil.request.ImageRequest
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class VoteJeuxFragment : Fragment(R.layout.fragment_vote_jeux) {
 
@@ -67,11 +69,11 @@ class VoteJeuxFragment : Fragment(R.layout.fragment_vote_jeux) {
         }
 
 
-        // Possibilité de changer l'image automatiquement via une coroutine.
+        // Possibilité de changer l'image automatiquement toutes les 4 secondes via une coroutine.
         // Veuillez décommenter le code ci-dessous.
         /*
         lifecycleScope.launch {
-            rafraichissementImage(imageView, requireContext(), imageLoader, request, urlSite)
+            rafraichissementImage(imageView, requireContext(), urlSite)
         }*/
     }
 
@@ -98,7 +100,7 @@ class VoteJeuxFragment : Fragment(R.layout.fragment_vote_jeux) {
 
 
     // Coroutine permettant de lancer un changement d'image régulier
-    suspend fun rafraichissementImage(imageView: ImageView, context: Context, imageLoader: ImageLoader, request: ImageRequest, urlSite: String) {
+    suspend fun rafraichissementImage(imageView: ImageView, context: Context, urlSite: String) {
         // Tant que nous sommes connectés à internet, nous changeons d'image toutes les 4 secondes
         while (isOnline(context)) {
             delay(4_000)
