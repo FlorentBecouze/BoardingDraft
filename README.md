@@ -80,9 +80,10 @@ La mise en place du **ViewModel**, sert non seulement de point d'entrée à la r
 ---
 
 ### Améliorations possibles :
+* Formater correctement la page des informations / règles de chaque jeux
 * Développer le reste de l'application (votes des joueurs ; résultats des votes)
 * Mettre un système pour ajouter / supprimer des jeux (actuellement tout ce fait lors de l'installation de l'application sur le téléphone)
-* Mettre un ComboBox sur la page d'accueil, pour sélectionner la langue d'affichage (Français :fr: ou Anglais :uk: pour l'instant)
+* Mettre un ComboBox sur la page d'accueil, pour sélectionner la langue d'affichage (Français ou Anglais pour l'instant)
 * Mettre une musique d'ambiance :musical_note:
 * Mettre plus de jeux dans la BDD
 
